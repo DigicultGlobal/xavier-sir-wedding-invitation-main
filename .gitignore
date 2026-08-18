@@ -8,3 +8,6 @@ node_modules/
 .pnpm-store/
 .convex/
 convex/_generated/ai/
+
+# Local Netlify folder
+.netlify

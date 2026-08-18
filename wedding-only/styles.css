@@ -1560,8 +1560,6 @@ button { font: inherit; }
 .rsvp-button:disabled { cursor: wait; opacity: .7; }
 .attendance-status { min-height: 1.25em; max-width: 290px; margin: 13px 0 0 !important; color: rgba(255,244,238,.83) !important; font-size: .76rem; line-height: 1.4; }
 .attendance-status.is-error { color: #ffd2df !important; }
-.attendance-total { margin: 14px 0 0 !important; color: rgba(255,244,238,.65) !important; font-size: .75rem; }
-.attendance-total strong { color: #fffaf4; font-variant-numeric: tabular-nums; }
 .venue-card:active, .rsvp-button:active { transform: scale(.96); }
 
 /* Betrothal chapter */

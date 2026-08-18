@@ -22,7 +22,6 @@ const guestIncrease = document.querySelector('#guestIncrease');
 const guestCount = document.querySelector('#guestCount');
 const acceptInvite = document.querySelector('#acceptInvite');
 const attendanceStatus = document.querySelector('#attendanceStatus');
-const attendeeTotal = document.querySelector('#attendeeTotal');
 const guestName = document.querySelector('#guestName');
 const attendingYes = document.querySelector('#attendingYes');
 const attendingNo = document.querySelector('#attendingNo');
@@ -191,7 +190,6 @@ async function loadAttendance() {
     guestName.value = invite.name || '';
     attendanceEvents?.querySelectorAll('input').forEach((input) => { input.checked = (invite.events || []).includes(input.value); });
     inviteAccepted = Boolean(invite.accepted);
-    attendeeTotal.textContent = Number(invite.totalGuests || 0).toLocaleString('en-IN');
     setAttendanceStatus(inviteAccepted ? (attending ? 'Your invitation is accepted.' : 'We have received your response.') : '');
   } catch {
     setAttendanceStatus('We could not reach the invitation service. Please try again shortly.', true);
@@ -229,7 +227,6 @@ async function saveAttendance() {
     selectedGuests = Number(invite.guests) || selectedGuests;
     attending = invite.attending !== false;
     inviteAccepted = Boolean(invite.accepted);
-    attendeeTotal.textContent = Number(invite.totalGuests || 0).toLocaleString('en-IN');
     setAttendanceStatus(attending ? 'Your place is reserved. We cannot wait to celebrate with you.' : 'Thank you for letting us know.');
   } catch {
     setAttendanceStatus('We could not save your response. Please try again.', true);

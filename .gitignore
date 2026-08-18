@@ -1,0 +1,10 @@
+.agents/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.env.local
+node_modules/
+.pnpm-store/
+.convex/
+convex/_generated/ai/

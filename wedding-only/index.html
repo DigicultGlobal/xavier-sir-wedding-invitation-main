@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6d0c27" />
+    <meta name="description" content="Wedding invitation for Dreama Maria and Xavier Kattikaran." />
+    <title>Dreama &amp; Xavier — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/envelope-motion-00.webp?v=5" fetchpriority="high" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=DM+Sans:wght@400;500;600&amp;family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=41" />
+  </head>
+  <body class="is-locked">
+    <main>
+      <div class="petal-layer" id="petalLayer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <button class="music-control" id="musicToggle" type="button" hidden aria-label="Play music" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l10-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="16" cy="16" r="3" /></svg>
+        <span>Music</span>
+      </button>
+      <audio id="backgroundMusic" preload="none" loop src="assets/wedding-song.mp3"></audio>
+      <section class="envelope-screen" id="opening" aria-label="Open the wedding invitation">
+        <button class="envelope-trigger" id="openInvite" aria-expanded="false" aria-controls="cinematicIntro invitation">
+          <span class="envelope-scene" aria-hidden="true">
+            <span class="envelope-stopmotion">
+              <img class="envelope-stopmotion-frame envelope-stopmotion-frame--closed" src="assets/envelope-motion-00.webp?v=5" alt="" decoding="sync" fetchpriority="high" />
+              <img class="envelope-stopmotion-animation" alt="" />
+              <img class="envelope-stopmotion-names" src="assets/names.svg" alt="" />
+            </span>
+            <span class="envelope-back"></span>
+            <span class="paper-sheet"><img src="assets/names.svg" alt="" /></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-pocket"></span>
+            <span class="wax-seal">
+              <span class="seal-crack"></span><span class="seal-chip seal-chip--one"></span><span class="seal-chip seal-chip--two"></span>
+              <img src="assets/initials.svg" alt="" />
+            </span>
+          </span>
+          <span class="open-instruction">Tap to open</span>
+        </button>
+      </section>
+
+      <section class="cinematic-intro" id="cinematicIntro" aria-label="The wedding of Dreama Maria and Xavier Kattikaran" hidden>
+        <picture class="cinematic-final-frame">
+          <source
+            media="(max-width: 900px) and (orientation: portrait)"
+            srcset="assets/wedding-hero-mobile.webp"
+          />
+          <img
+            src="assets/wedding-hero-desktop.webp"
+            alt="Watercolour portrait of Dreama Maria and Xavier Kattikaran"
+            width="1672"
+            height="941"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero-wedding-copy">
+          <p>With joyful hearts</p>
+          <h1>We are getting married</h1>
+          <div class="hero-wedding-names">
+            <span>Dreama</span>
+            <div class="marriage-seal" aria-hidden="true"><img src="assets/initials.svg" alt="" /></div>
+            <span>Xavier</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="wedding-intro scroll-reveal" aria-labelledby="weddingIntroTitle">
+        <div class="wedding-intro-inner">
+          <p class="wedding-intro-eyebrow">With the blessings of the Almighty</p>
+          <h2 id="weddingIntroTitle">The Wedding <span>Ceremony</span></h2>
+          <p class="wedding-intro-note">Together with our families, we joyfully invite you to the wedding.</p>
+        </div>
+      </section>
+
+      <section class="invitation" id="invitation" aria-label="Wedding invitation" hidden>
+        <div class="invitation-inner invitation-inner--compact">
+          <div class="invitation-prologue">
+            <p class="scripture">“Love is patient, love is kind. It always protects, always trusts, always hopes, always perseveres.”</p>
+            <img class="heart-mark" src="assets/heart.svg" alt="" />
+
+            <p class="host">
+              <span>By the Grace of Almighty God</span><br />
+              <strong>Mrs. Ponnamma Antony &amp; Mr. A. P. Antony</strong>
+            </p>
+
+            <p class="request-copy">
+              Cordially request the honour of your gracious presence,
+              together with your family, as they celebrate the Wedding Ceremony of their beloved granddaughter
+            </p>
+
+            <div class="invitation-families" aria-label="The families">
+              <p><span><strong>Dreama Maria</strong><br />Beloved daughter of Mrs. Jisha Antony &amp; Mr. Siju Joseph<br /><small>(Kochuthazhathu House, Kadavoor P O, Njarakkad)</small></span></p>
+              <p><span><strong>Xavier Kattikaran</strong><br />Beloved son of Mrs. Mary Mathew &amp; Mr. Mathew Kattikaran<br /><small>(Flat No. 12D, Kattikkaran JMJ Residency K.K.P. Road, Ernakulam)</small></span></p>
+            </div>
+          </div>
+
+          <p class="celebrant">
+            We warmly invite you &amp; your family<br />
+            to join us in this celebration of faith, love, and togetherness.<br />
+            <span>With Love &amp; Best Compliments</span><br />
+            <strong>Dhiya &amp; Joseph</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="event scroll-reveal" aria-labelledby="eventDate">
+        <div class="event-layout">
+          <div class="event-date" id="eventDate">
+            <span class="weekday">Sunday</span>
+            <div class="day" aria-label="13th"><strong>13</strong><span class="ordinal">th</span></div>
+            <span class="month"><span>September</span><small>2026</small></span>
+            <p class="event-sacrament" aria-label="The Sacrament of Holy Matrimony at 11:00 AM">Holy Matrimony <span aria-hidden="true">·</span> <strong>11:00 AM</strong></p>
+          </div>
+
+          <div class="venues" aria-label="Wedding day venues">
+            <a class="venue-card" href="https://www.google.com/maps/search/?api=1&amp;query=St.%20Francis%20Assisi%20Cathedral%20Broadway%20Ernakulam" target="_blank" rel="noreferrer" aria-label="Directions to the wedding ceremony at St. Francis Assisi Cathedral">
+              <img src="assets/location.svg" alt="" />
+              <span class="venue-copy">
+              <span class="venue-kind">Wedding ceremony</span>
+                <strong>St. Francis Assisi Cathedral</strong>
+                <small>Broadway, Ernakulam</small>
+              </span>
+              <span class="venue-action">Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </a>
+            <a class="venue-card" href="https://www.google.com/maps/search/?api=1&amp;query=Parish%20Hall%20St.%20Mary%27s%20Cathedral%20Basilica%20Broadway%20Ernakulam" target="_blank" rel="noreferrer" aria-label="Directions to the reception at St. Mary’s Cathedral Basilica Parish Hall">
+              <img src="assets/food.svg" alt="" />
+              <span class="venue-copy">
+                <span class="venue-kind">Reception</span>
+                <strong>Parish Hall, St. Mary’s Cathedral Basilica</strong>
+                <small>Broadway, Ernakulam</small>
+              </span>
+              <span class="venue-action">Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown scroll-reveal" aria-labelledby="countdownTitle">
+        <div class="countdown-content">
+          <p class="countdown-overline">Our forever begins in</p>
+          <h2 id="countdownTitle">Counting down</h2>
+          <p class="countdown-note">We cannot wait to celebrate this beautiful day with you.</p>
+          <div class="countdown-units" data-countdown data-target="2026-09-13T00:00:00+05:30" aria-live="polite">
+            <div><strong data-countdown-days>00</strong><span>Days</span></div>
+            <div><strong data-countdown-hours>00</strong><span>Hours</span></div>
+            <div><strong data-countdown-minutes>00</strong><span>Minutes</span></div>
+            <div><strong data-countdown-seconds>00</strong><span>Seconds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="memory-story" aria-labelledby="storyTitle">
+        <header class="memory-intro">
+          <p>Our story</p>
+          <h2 id="storyTitle">Small moments, held forever</h2>
+        </header>
+        <div class="memory-chapter memory-chapter--opening">
+          <figure class="memory-frame memory-frame--bench">
+            <button class="memory-open" type="button" data-photo="assets/story-bench-wide.webp" aria-label="Enlarge photograph of Dreama and Xavier seated together">
+              <img src="assets/story-bench-wide.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Dreama and Xavier seated together" />
+            </button>
+          </figure>
+        </div>
+
+        <div class="memory-chapter memory-chapter--portraits">
+          <figure class="memory-frame memory-frame--night">
+            <button class="memory-open" type="button" data-photo="assets/story-night.webp" aria-label="Enlarge photograph of Dreama and Xavier together">
+              <img src="assets/story-night.webp" width="1238" height="2200" loading="lazy" decoding="async" alt="Dreama and Xavier together" />
+            </button>
+          </figure>
+          <figure class="memory-frame memory-frame--window">
+            <button class="memory-open" type="button" data-photo="assets/story-window.webp" aria-label="Enlarge photograph of Dreama and Xavier looking at one another">
+              <img src="assets/story-window.webp" width="1238" height="2200" loading="lazy" decoding="async" alt="Dreama and Xavier looking at one another" />
+            </button>
+          </figure>
+        </div>
+
+        <div class="memory-chapter memory-chapter--closing">
+          <figure class="memory-frame memory-frame--watercolour">
+            <button class="memory-open" type="button" data-photo="assets/story-watercolor.webp" aria-label="Enlarge watercolour portrait of Dreama and Xavier">
+              <img src="assets/story-watercolor.webp" width="905" height="1280" loading="lazy" decoding="async" alt="Watercolour portrait of Dreama and Xavier" />
+            </button>
+          </figure>
+          <figure class="memory-frame memory-frame--park">
+            <button class="memory-open" type="button" data-photo="assets/story-park.webp" aria-label="Enlarge photograph of Dreama and Xavier smiling in the park">
+              <img src="assets/story-park.webp" width="1238" height="2200" loading="lazy" decoding="async" alt="Dreama and Xavier smiling in the park" />
+            </button>
+          </figure>
+          <figure class="memory-frame memory-frame--hands">
+            <button class="memory-open" type="button" data-photo="assets/story-hands.webp" aria-label="Enlarge photograph of Dreama and Xavier holding hands">
+              <img src="assets/story-hands.webp" width="959" height="1280" loading="lazy" decoding="async" alt="Dreama and Xavier holding hands" />
+            </button>
+          </figure>
+        </div>
+      </section>
+
+      <dialog class="photo-viewer" id="photoViewer" aria-label="Expanded photograph">
+        <button class="photo-viewer-close" type="button" aria-label="Close expanded photograph">&times;</button>
+        <img alt="" />
+      </dialog>
+
+      <section class="rsvp scroll-reveal" id="rsvp" aria-labelledby="rsvpTitle" data-attendance-endpoint="" data-invitation-variant="weddingOnly">
+        <div class="attendance-copy">
+          <img src="assets/heart.svg" alt="" />
+          <p class="attendance-kicker">A place is held for you</p>
+          <h2 id="rsvpTitle">With joy, we invite you.</h2>
+          <p class="attendance-note">Let us know who will be joining us for the wedding.</p>
+          <p class="attendance-contact">RSVP<br /><a href="tel:+919446390256">+91 94463 90256</a></p>
+        </div>
+
+        <div class="attendance-response">
+          <label class="attendance-label attendance-name-label" for="guestName">Your name</label>
+          <input class="attendance-name" id="guestName" name="guestName" autocomplete="name" maxlength="80" placeholder="Enter your name" />
+          <p class="attendance-label attendance-label--choice">Will you be attending?</p>
+          <div class="attendance-choice" role="group" aria-label="Attendance response">
+            <button type="button" class="attendance-choice-button is-selected" id="attendingYes">Joyfully accept</button>
+            <button type="button" class="attendance-choice-button" id="attendingNo">Regretfully decline</button>
+          </div>
+          <p class="attendance-label attendance-label--party">Your party</p>
+          <div class="guest-stepper" role="group" aria-label="Number of guests attending">
+            <button class="guest-stepper-button" id="guestDecrease" type="button" aria-label="Decrease guest count">−</button>
+            <output class="guest-count" id="guestCount" aria-live="polite">1</output>
+            <button class="guest-stepper-button" id="guestIncrease" type="button" aria-label="Increase guest count">+</button>
+          </div>
+          <p class="attendance-label attendance-label--detail">Guests attending</p>
+          <button class="rsvp-button" id="acceptInvite" type="button">
+            <svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.2 18.5 3.8 20l1.1-3.6A8 8 0 1 1 7.2 18.5Z" />
+              <path d="m8.2 11.8 2.1 2.1 5-5" />
+            </svg>
+            <span>Accept invitation</span>
+          </button>
+          <p class="attendance-status" id="attendanceStatus" aria-live="polite"></p>
+          <p class="attendance-total"><strong id="attendeeTotal">—</strong> guests are celebrating with us</p>
+        </div>
+      </section>
+
+      <footer class="closing">
+        <p class="closing-title">With Love and Best Compliments</p>
+        <p class="closing-names">
+          <span>Dhiya &amp; Joseph</span>
+        </p>
+        <p class="closing-place">Abu Dhabi, UAE</p>
+        <p class="section-signature">Designing moments that last a lifetime. <span>|</span> Digicult Global</p>
+      </footer>
+    </main>
+    <script defer src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+    <script defer src="site-config.js"></script>
+    <script defer src="script.js"></script>
+  </body>
+</html>

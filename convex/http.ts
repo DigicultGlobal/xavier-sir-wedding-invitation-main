@@ -14,8 +14,10 @@ function validInviteToken(token: string | null) {
   return Boolean(token && /^[a-zA-Z0-9-]{16,80}$/.test(token));
 }
 
-function invitationVariant(value: unknown): "full" | "weddingOnly" {
-  return value === "weddingOnly" ? "weddingOnly" : "full";
+function invitationVariant(value: unknown): "full" | "weddingOnly" | "betrothalOnly" {
+  if (value === "weddingOnly") return "weddingOnly";
+  if (value === "betrothalOnly") return "betrothalOnly";
+  return "full";
 }
 
 http.route({

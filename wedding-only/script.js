@@ -215,7 +215,7 @@ async function saveAttendance() {
   try {
     const events = attendanceEvents
       ? [...attendanceEvents.querySelectorAll('input:checked')].map((input) => input.value)
-      : ['wedding'];
+      : ['betrothal'];
     const response = await fetch(attendanceEndpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

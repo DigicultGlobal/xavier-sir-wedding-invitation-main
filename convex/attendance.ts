@@ -2,8 +2,8 @@ import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
 const summaryKey = "wedding";
-const invitationVariantValidator = v.union(v.literal("full"), v.literal("weddingOnly"));
-type InvitationVariant = "full" | "weddingOnly";
+const invitationVariantValidator = v.union(v.literal("full"), v.literal("weddingOnly"), v.literal("betrothalOnly"));
+type InvitationVariant = "full" | "weddingOnly" | "betrothalOnly";
 
 function normaliseGuestCount(value: number) {
   if (!Number.isFinite(value)) return 1;
@@ -15,7 +15,7 @@ function normaliseName(value: string) {
 }
 
 function normaliseEvents(events: string[], variant: InvitationVariant) {
-  const allowed = new Set(variant === "weddingOnly" ? ["wedding"] : ["betrothal", "wedding"]);
+  const allowed = new Set(variant === "weddingOnly" ? ["wedding"] : variant === "betrothalOnly" ? ["betrothal"] : ["betrothal", "wedding"]);
   return [...new Set(events.filter((event) => allowed.has(event)))];
 }
 
@@ -38,7 +38,7 @@ export const getInvite = query({
       attending: response?.attending ?? true,
       name: response?.name ?? "",
       guests: response?.guests ?? 1,
-      events: normaliseEvents(response?.events ?? (args.variant === "weddingOnly" ? ["wedding"] : ["betrothal", "wedding"]), args.variant),
+      events: normaliseEvents(response?.events ?? (args.variant === "weddingOnly" ? ["wedding"] : args.variant === "betrothalOnly" ? ["betrothal"] : ["betrothal", "wedding"]), args.variant),
       totalGuests: summary?.totalGuests ?? 0,
     };
   },
